@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Data</title>
+</head>
+
+<body>
+    <h1 align="center">Dados Lidos dos Convites</h1>
+    
+    <h2>Lista de Convites:</h2>
+    <ul>
+        {% for data in data_list %}
+            <li><strong>Nome:</strong> {{ data.name }} <br>
+                <strong>Email:</strong> {{ data.email }} <br>
+                <strong>Telefone:</strong> {{ data.phone }}
+            </li>
+        {% else %}
+            <li>Nenhum dado lido ainda.</li>
+        {% endfor %}
+    </ul>
+    
+</body>
+
+</html>
